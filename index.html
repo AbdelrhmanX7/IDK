@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="header_input">
+        <p>سعر الاجرة:</p>
+        <input class="header_price" value="5" type="number" />
+      </div>
+      <p class="show_Result">الاجرة كاملة: 0</p>
+    </header>
+    <main>
+      <div class="calculator_btns">
+        <div class="calculator_btn">
+          <p>1</p>
+          <div>
+            فاضي<input class="check_radio" onclick="change_state(this)" type="radio" name="Group1" value="فاضي" id="" checked="true"/>
+            مدفعش<input class="check_radio" onclick="change_state(this)"type="radio" name="Group1" id="" value="مدفعش" />
+            دفع<input class="check_radio" onclick="change_state(this)"type="radio" name="Group1" id="" value="دفع" />
+          </div>
+          <div class="price">
+            <label for="Price">المدفوع</label>
+            <select name="Price" onfocus="this.size=3;" size="1" onblur="this.size=1;" id="" onchange="change_pay_price(this)">
+              <option class="first_value" value="1.5">1.5</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+              <option value="200">200</option>
+            </select>
+            <p>باقي: 0</p>
+          </div>
+        </div>
+        <div class="calculator_btn">
+          <p>2</p>
+          <div>
+             فاضي<input class="check_radio" onclick="change_state(this)"type="radio" name="Group2" value="فاضي" id="" checked="true"/>
+             مدفعش<input class="check_radio" onclick="change_state(this)"type="radio" name="Group2" id="" value="مدفعش" />
+             دفع<input class="check_radio" onclick="change_state(this)"type="radio" name="Group2" id="" value="دفع" />
+          </div>
+          <div class="price">
+            <label for="Price">المدفوع</label>
+            <select name="Price" onfocus="this.size=3;" size="1" onblur="this.size=1;" id="" onchange="change_pay_price(this)">
+              <option class="first_value" value="1.5">1.5</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+              <option value="200">200</option>
+            </select>
+            <p>باقي: 0</p>
+          </div>
+        </div>
+        <div class="calculator_btn">
+          <p>3</p>
+          <div>
+             فاضي<input class="check_radio" onclick="change_state(this)"type="radio" name="Group3" value="فاضي" id="" checked="true"/>
+             مدفعش<input class="check_radio" onclick="change_state(this)"type="radio" name="Group3" id="" value="مدفعش" />
+             دفع<input class="check_radio" onclick="change_state(this)"type="radio" name="Group3" id="" value="دفع"/>
+          </div>
+          <div class="price">
+            <label for="Price">المدفوع</label>
+            <select name="Price" onfocus="this.size=3;" size="1" onblur="this.size=1;" id="" onchange="change_pay_price(this)">
+              <option class="first_value" value="1.5">1.5</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+              <option value="200">200</option>
+            </select>
+            <p>باقي: 0</p>
+          </div>
+        </div>
+        <div class="calculator_btn">
+          <p>4</p>
+          <div>
+             فاضي<input class="check_radio" onclick="change_state(this)"type="radio" name="Group4" value="فاضي" id="" checked="true"/>
+             مدفعش<input class="check_radio" onclick="change_state(this)"type="radio" name="Group4" id="" value="مدفعش" />
+             دفع<input class="check_radio" onclick="change_state(this)"type="radio" name="Group4" id="" value="دفع" />
+          </div>
+          <div class="price">
+            <label for="Price">المدفوع</label>
+            <select name="Price" onfocus="this.size=3;" size="1" onblur="this.size=1;" id="" onchange="change_pay_price(this)">
+              <option class="first_value" value="1.5">1.5</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+              <option value="200">200</option>
+            </select>
+            <p>باقي: 0</p>
+          </div>
+        </div>
+        <div class="calculator_btn">
+          <p>5</p>
+          <div>
+             فاضي<input class="check_radio" onclick="change_state(this)"type="radio" name="Group5" value="فاضي" id="" checked="true"/>
+             مدفعش<input class="check_radio" onclick="change_state(this)"type="radio" name="Group5" id="" value="مدفعش" />
+             دفع<input class="check_radio" onclick="change_state(this)"type="radio" name="Group5" id="" value="دفع" />
+          </div>
+          <div class="price">
+            <label for="Price">المدفوع</label>
+            <select name="Price" onfocus="this.size=3;" size="1" onblur="this.size=1;" id="" onchange="change_pay_price(this)">
+              <option class="first_value" value="1.5">1.5</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+              <option value="200">200</option>
+            </select>
+            <p>باقي: 0</p>
+          </div>
+        </div>
+        <div class="calculator_btn">
+          <p>6</p>
+          <div>
+             فاضي<input class="check_radio" onclick="change_state(this)"type="radio" name="Group6" value="فاضي" id="" checked="true"/>
+             مدفعش<input class="check_radio" onclick="change_state(this)"type="radio" name="Group6" id="" value="مدفعش" />
+             دفع<input class="check_radio" onclick="change_state(this)"type="radio" name="Group6" id="" value="دفع"/>
+          </div>
+          <div class="price">
+            <label for="Price">المدفوع</label>
+            <select name="Price" onfocus="this.size=3;" size="1" onblur="this.size=1;" id="" onchange="change_pay_price(this)">
+              <option class="first_value" value="1.5">1.5</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+              <option value="200">200</option>
+            </select>
+            <p>باقي: 0</p>
+          </div>
+        </div>
+        <div class="calculator_btn">
+          <p>7</p>
+          <div>
+             فاضي<input class="check_radio" onclick="change_state(this)"type="radio" name="Group7" value="فاضي" id="" checked="true"/>
+             مدفعش<input class="check_radio" onclick="change_state(this)"type="radio" name="Group7" id="" value="مدفعش" />
+             دفع<input class="check_radio" onclick="change_state(this)"type="radio" name="Group7" id="" value="دفع"/>
+          </div>
+          <div class="price">
+            <label for="Price">المدفوع</label>
+            <select name="Price" onfocus="this.size=3;" size="1" onblur="this.size=1;" id="" onchange="change_pay_price(this)">
+              <option class="first_value" value="1.5">1.5</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+              <option value="200">200</option>
+            </select>
+            <p>باقي: 0</p>
+          </div>
+        </div>
+        <div class="calculator_btn">
+          <p>8</p>
+          <div>
+             فاضي<input class="check_radio" onclick="change_state(this)"type="radio" name="Group8" value="فاضي" id="" checked="true"/>
+             مدفعش<input class="check_radio" onclick="change_state(this)"type="radio" name="Group8" id="" value="مدفعش" />
+             دفع<input class="check_radio" onclick="change_state(this)"type="radio" name="Group8" id="" value="دفع"/>
+          </div>
+          <div class="price">
+            <label for="Price">المدفوع</label>
+            <select name="Price" onfocus="this.size=3;" size="1" onblur="this.size=1;" id="" onchange="change_pay_price(this)">
+              <option class="first_value" value="1.5">1.5</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+              <option value="200">200</option>
+            </select>
+            <p>باقي: 0</p>
+          </div>
+        </div>
+        <div class="calculator_btn">
+          <p>9</p>
+          <div>
+             فاضي<input class="check_radio" onclick="change_state(this)"type="radio" name="Group9" value="فاضي" id="" checked="true"/>
+             مدفعش<input class="check_radio" onclick="change_state(this)"type="radio" name="Group9" id="" value="مدفعش" />
+             دفع<input class="check_radio" onclick="change_state(this)"type="radio" name="Group9" id="" value="دفع"/>
+          </div>
+          <div class="price">
+            <label for="Price">المدفوع</label>
+            <select name="Price" onfocus="this.size=3;" size="1" onblur="this.size=1;" id="" onchange="change_pay_price(this)">
+              <option class="first_value" value="1.5">1.5</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+              <option value="200">200</option>
+            </select>
+            <p>باقي: 0</p>
+          </div>
+        </div>
+        <div class="calculator_btn">
+          <p>10</p>
+          <div>
+             فاضي<input class="check_radio" onclick="change_state(this)"type="radio" name="Group10" value="فاضي" id="" checked="true"/>
+             مدفعش<input class="check_radio" onclick="change_state(this)"type="radio" name="Group10" id="" value="مدفعش" />
+             دفع<input class="check_radio" onclick="change_state(this)"type="radio" name="Group10" id="" value="دفع"/>
+          </div>
+          <div class="price">
+            <label for="Price">المدفوع</label>
+            <select name="Price" onfocus="this.size=3;" size="1" onblur="this.size=1;" id="" onchange="change_pay_price(this)">
+              <option class="first_value" value="1.5">1.5</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+              <option value="200">200</option>
+            </select>
+            <p>باقي: 0</p>
+          </div>
+        </div>
+        <div class="calculator_btn">
+          <p>11</p>
+          <div>
+             فاضي<input class="check_radio" onclick="change_state(this)"type="radio" name="Group11" value="فاضي" id="" checked="true"/>
+             مدفعش<input class="check_radio" onclick="change_state(this)"type="radio" name="Group11" id="" value="مدفعش" />
+             دفع<input class="check_radio" onclick="change_state(this)"type="radio" name="Group11" id="" value="دفع" />
+          </div>
+          <div class="price">
+            <label for="Price">المدفوع</label>
+            <select name="Price" onfocus="this.size=3;" size="1" onblur="this.size=1;" id="" onchange="change_pay_price(this)">
+              <option class="first_value" value="1.5">1.5</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+              <option value="200">200</option>
+            </select>
+            <p>باقي: 0</p>
+          </div>
+        </div>
+        <div class="calculator_btn">
+          <p>12</p>
+          <div>
+            فاضي<input class="check_radio" onclick="change_state(this)"type="radio" name="Group12" value="فاضي" id="" checked="true"/>
+            مدفعش<input class="check_radio" onclick="change_state(this)"type="radio" name="Group12" id="" value="مدفعش" />
+            دفع<input class="check_radio" onclick="change_state(this)"type="radio" name="Group12" id="" value="دفع"/>
+          </div>
+          <div class="price">
+            <label for="Price">المدفوع</label>
+            <select name="Price" onfocus="this.size=3;" size="1" onblur="this.size=1;" id="" onchange="change_pay_price(this)">
+              <option class="first_value" value="1.5">1.5</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+              <option value="200">200</option>
+            </select>
+            <p>باقي: 0</p>
+          </div>
+        </div>
+        <div class="calculator_btn">
+          <p>13</p>
+          <div>
+             فاضي<input class="check_radio" onclick="change_state(this)"type="radio" name="Group13" value="فاضي" id="" checked="true"/>
+             مدفعش<input class="check_radio" onclick="change_state(this)"type="radio" name="Group13" id="" value="مدفعش" />
+             دفع<input class="check_radio" onclick="change_state(this)"type="radio" name="Group13" id="" value="دفع"/>
+          </div>
+          <div class="price">
+            <label for="Price">المدفوع</label>
+            <select name="Price" onfocus="this.size=3;" size="1" onblur="this.size=1;" id="" onchange="change_pay_price(this)">
+              <option class="first_value" value="1.5">1.5</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+              <option value="200">200</option>
+            </select>
+            <p>باقي: 0</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <button onclick="Select_All(this)">مفيش حد</button>
+      <button onclick="Select_All(this)">كل موجود</button>
+      <button onclick="Select_All(this)">كل دفع</button>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
